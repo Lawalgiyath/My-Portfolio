@@ -44,7 +44,7 @@ export function ProjectsSection() {
             key={category}
             variant={activeCategory === category ? "default" : "outline"}
             onClick={() => setActiveCategory(category)}
-            className="rounded-full transition-all duration-300 shadow-sm hover:shadow-md neumorphism-btn"
+            className="rounded-full"
           >
             {category}
           </Button>
@@ -66,7 +66,7 @@ export function ProjectsSection() {
                 <DialogTrigger asChild>
                   <div
                     onClick={() => handleProjectClick(project.title)}
-                    className="group relative block w-full h-full rounded-2xl overflow-hidden cursor-pointer"
+                    className="group relative block w-full h-full rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
                   >
                     <Image
                       src={project.imageUrl}
@@ -76,14 +76,14 @@ export function ProjectsSection() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       data-ai-hint={project.data_ai_hint}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80" />
                     <div className="absolute bottom-0 left-0 p-6 text-white">
                       <h3 className="text-2xl font-bold font-headline">{project.title}</h3>
                       <p>{project.category}</p>
                     </div>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[625px] bg-white/50 dark:bg-black/50 backdrop-blur-lg border-white/20">
+                <DialogContent className="sm:max-w-[625px] bg-card/80 backdrop-blur-xl border-border/50">
                   <DialogHeader>
                     <DialogTitle className="font-headline text-3xl">{project.title}</DialogTitle>
                     <div className="flex flex-wrap gap-2 py-2">

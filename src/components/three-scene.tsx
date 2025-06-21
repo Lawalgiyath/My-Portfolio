@@ -27,7 +27,7 @@ export function ThreeScene() {
     // Geometry
     const geometry = new THREE.TorusKnotGeometry(1.5, 0.4, 100, 16);
     const material = new THREE.MeshStandardMaterial({
-      color: 0xb2beb5, // Muted purple from theme idea
+      color: 0x3b82f6,
       metalness: 0.5,
       roughness: 0.3,
     });
@@ -42,7 +42,7 @@ export function ThreeScene() {
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
     
-    const pointLight2 = new THREE.PointLight(0x94B49F, 2);
+    const pointLight2 = new THREE.PointLight(0xa8c7fa, 2);
     pointLight2.position.set(-5, -5, 2);
     scene.add(pointLight2);
 

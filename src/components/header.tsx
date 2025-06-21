@@ -21,7 +21,10 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
       
-      const sections = navItems.map(item => document.querySelector(item.href));
+      const sections = navItems.map(item => {
+        const el = document.querySelector(item.href);
+        return el as HTMLElement | null;
+      });
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -41,8 +44,10 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
       <nav
         className={cn(
-          "w-full max-w-2xl transition-all duration-300 ease-in-out rounded-full border border-transparent flex items-center justify-between px-4 py-2",
-          isScrolled && "bg-white/30 dark:bg-black/30 backdrop-blur-md border-white/20 shadow-lg"
+          "w-full max-w-2xl transition-all duration-300 ease-in-out rounded-full border flex items-center justify-between px-4 py-2",
+          isScrolled 
+            ? "border-border/50 bg-card/80 backdrop-blur-lg shadow-lg" 
+            : "border-transparent"
         )}
       >
         <a href="#home" className="text-lg font-headline font-bold">

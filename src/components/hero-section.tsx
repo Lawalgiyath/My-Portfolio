@@ -5,6 +5,7 @@ import { ArrowDown } from "lucide-react";
 export function HeroSection() {
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-background bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.1),transparent_70%)]" />
       <ThreeScene />
       <div className="relative z-10 flex flex-col items-center p-4">
         <h1 className="text-5xl md:text-7xl font-headline font-bold text-foreground mb-4">

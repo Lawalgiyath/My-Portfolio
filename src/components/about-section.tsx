@@ -11,7 +11,7 @@ export function AboutSection() {
               alt="Lawal Giyath"
               width={400}
               height={500}
-              className="rounded-lg shadow-2xl object-cover"
+              className="rounded-lg shadow-2xl object-cover border-8 border-card"
               data-ai-hint="professional portrait"
             />
         </div>

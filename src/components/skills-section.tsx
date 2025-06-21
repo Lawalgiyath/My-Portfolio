@@ -10,7 +10,7 @@ export function SkillsSection() {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {skills.map((skill) => (
-          <Card key={skill.name} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+          <Card key={skill.name} className="text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-primary">
             <CardHeader>
               <div className="mx-auto bg-primary/20 text-primary rounded-full p-4 w-fit">
                 <skill.Icon className="h-8 w-8" />
