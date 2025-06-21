@@ -24,27 +24,52 @@ export function ThreeScene() {
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
     
-    // Geometry
-    const geometry = new THREE.TorusKnotGeometry(1.5, 0.4, 100, 16);
-    const material = new THREE.MeshStandardMaterial({
-      color: 0x3b82f6,
-      metalness: 0.5,
-      roughness: 0.3,
+    // Crystal Object
+    const crystalGroup = new THREE.Group();
+    const geometry = new THREE.IcosahedronGeometry(1.8, 0);
+
+    const material = new THREE.MeshPhysicalMaterial({
+        roughness: 0,
+        metalness: 0.1,
+        transmission: 1,
+        ior: 2.33,
+        thickness: 0.5,
+        color: 0xffffff,
     });
-    const torusKnot = new THREE.Mesh(geometry, material);
-    scene.add(torusKnot);
+    
+    const crystal = new THREE.Mesh(geometry, material);
+    crystalGroup.add(crystal);
+
+    const wireframeGeometry = new THREE.WireframeGeometry(geometry);
+    const wireframeMaterial = new THREE.LineBasicMaterial({
+        color: 0xffffff,
+        opacity: 0.1,
+        transparent: true
+    });
+    const wireframe = new THREE.LineSegments(wireframeGeometry, wireframeMaterial);
+    crystalGroup.add(wireframe);
+    
+    scene.add(crystalGroup);
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1);
+    const pointLight = new THREE.PointLight(0xffffff, 5);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
-    
-    const pointLight2 = new THREE.PointLight(0xa8c7fa, 2);
+
+    const pointLight2 = new THREE.PointLight(0x88ddff, 10);
     pointLight2.position.set(-5, -5, 2);
     scene.add(pointLight2);
+    
+    // Handle mouse move
+    let mouse = new THREE.Vector2();
+    const onMouseMove = (event: MouseEvent) => {
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+    };
+    window.addEventListener('mousemove', onMouseMove);
 
 
     // Handle resize
@@ -57,10 +82,20 @@ export function ThreeScene() {
     window.addEventListener('resize', handleResize);
 
     // Animation loop
+    const clock = new THREE.Clock();
     const animate = () => {
       requestAnimationFrame(animate);
-      torusKnot.rotation.x += 0.001;
-      torusKnot.rotation.y += 0.005;
+      
+      const elapsedTime = clock.getElapsedTime();
+      
+      crystalGroup.rotation.y = elapsedTime * 0.2;
+      crystalGroup.rotation.x = elapsedTime * 0.1;
+      
+      // Follow mouse
+      camera.position.x += (mouse.x * 2 - camera.position.x) * 0.02;
+      camera.position.y += (mouse.y * 2 - camera.position.y) * 0.02;
+      camera.lookAt(scene.position);
+
       renderer.render(scene, camera);
     };
     animate();
@@ -68,11 +103,12 @@ export function ThreeScene() {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', onMouseMove);
       if (currentMount) {
         currentMount.removeChild(renderer.domElement);
       }
     };
   }, []);
 
-  return <div ref={mountRef} className="absolute top-0 left-0 w-full h-full" />;
+  return <div ref={mountRef} className="absolute top-0 left-0 w-full h-full -z-10" />;
 }
