@@ -21,29 +21,40 @@ export const projects: Project[] = [
     link: "#",
     data_ai_hint: "digital art",
   },
+  {
+    id: "project-3",
+    title: "Nova OS",
+    category: "UI/UX Design",
+    description: "Concept for a next-generation operating system with a focus on fluidity, minimalism, and AI integration.",
+    tags: ["Figma", "Concept", "UI/UX"],
+    imageUrl: "https://placehold.co/600x400.png",
+    link: "#",
+    data_ai_hint: "minimalist os",
+  }
 ];
 
 export const skillsetAndTools: Skill = {
   title: "My skillset & tools",
   items: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5 & CSS3",
-    "TailwindCSS",
-    "Figma",
+    "Next.js & React",
+    "TypeScript & JavaScript",
+    "Node.js & Python",
+    "TailwindCSS & Framer Motion",
+    "Three.js & WebGL",
+    "Figma & Adobe Suite",
+    "Genkit & AI Integration"
   ],
 };
 
 export const servicesAndOfferings: Skill = {
   title: "My services & offerings",
   items: [
-    "Website Development",
-    "UI/UX Design",
-    "App Development",
-    "E-commerce",
-    "Marketing & SEO",
+    "Full-stack Web Development",
+    "Interactive 3D Experiences",
+    "UI/UX Design & Prototyping",
+    "AI Feature Integration",
+    "E-commerce & Web Apps",
+    "Creative Direction"
   ],
 };
 

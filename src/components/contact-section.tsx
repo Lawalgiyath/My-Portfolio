@@ -5,8 +5,8 @@ export function ContactSection() {
   return (
     <section id="contact" className="container mx-auto px-4">
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold tracking-tight">Let's talk</h2>
-        <p className="text-lg text-muted-foreground mt-4 mb-8">
+        <h2 className="text-4xl font-headline font-bold">Let's talk</h2>
+        <p className="text-lg text-foreground/70 mt-4 mb-8">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
         </p>
         <Button asChild size="lg">
