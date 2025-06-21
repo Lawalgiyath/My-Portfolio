@@ -8,6 +8,7 @@ export interface Project {
   tags: string[];
   imageUrl: string;
   link?: string;
+  data_ai_hint: string;
 }
 
 export interface Skill {
