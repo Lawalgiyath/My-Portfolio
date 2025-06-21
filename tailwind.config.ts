@@ -1,5 +1,4 @@
 import type {Config} from 'tailwindcss';
-import {motion} from 'framer-motion';
 
 export default {
   darkMode: ['class'],
