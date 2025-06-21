@@ -1,5 +1,3 @@
-import type { LucideIcon } from "lucide-react";
-
 export interface Project {
   id: string;
   title: string;
@@ -12,14 +10,13 @@ export interface Project {
 }
 
 export interface Skill {
-  name: string;
-  Icon: LucideIcon;
+  title: string;
+  items: string[];
 }
 
-export interface Experience {
-  date: string;
-  title: string;
-  company: string;
-  description: string;
-  Icon: LucideIcon;
+export interface Testimonial {
+  name: string;
+  role: string;
+  avatarUrl: string;
+  comment: string;
 }

@@ -1,15 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
+  { name: "Work", href: "#projects" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -19,21 +16,26 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-      
-      const sections = navItems.map(item => {
-        const el = document.querySelector(item.href);
-        return el as HTMLElement | null;
-      });
-      const scrollPosition = window.scrollY + 100;
+      const isScrolled = window.scrollY > 10;
+      setIsScrolled(isScrolled);
 
+      const sections = navItems.map(item => document.querySelector(item.href) as HTMLElement | null);
+      const scrollPosition = window.scrollY + 100;
+      
+      let currentSection = "home";
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].href.substring(1));
+          currentSection = navItems[i].href.substring(1);
           break;
         }
       }
+      
+      if (window.scrollY < 200) {
+        currentSection = "home";
+      }
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,43 +43,30 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
-      <nav
-        className={cn(
-          "w-full max-w-2xl transition-all duration-300 ease-in-out rounded-full border flex items-center justify-between px-4 py-2",
-          isScrolled 
-            ? "border-border/50 bg-card/80 backdrop-blur-lg shadow-lg" 
-            : "border-transparent"
-        )}
-      >
-        <a href="#home" className="text-lg font-headline font-bold">
-          Giyathverse
-        </a>
-        <ul className="hidden md:flex items-center space-x-2">
-          {navItems.map((item) => (
-            <li key={item.name}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? 'border-b bg-background/80 backdrop-blur-sm' : '')}>
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-20">
+          <a href="#home" className="text-xl font-bold tracking-tight">
+            Giyathverse
+          </a>
+          <nav className="hidden md:flex items-center space-x-2">
+            {navItems.map((item) => (
               <a
+                key={item.name}
                 href={item.href}
                 className={cn(
-                  "px-3 py-1.5 text-sm rounded-full relative transition-colors duration-300",
+                  "px-3 py-1.5 text-sm rounded-md transition-colors duration-300 font-medium",
                   activeSection === item.href.substring(1)
-                    ? "text-primary-foreground"
-                    : "text-foreground/70 hover:text-foreground"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
-                {activeSection === item.href.substring(1) && (
-                  <motion.span
-                    layoutId="activeSection"
-                    className="absolute inset-0 bg-primary rounded-full z-[-1]"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
                 {item.name}
               </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+            ))}
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

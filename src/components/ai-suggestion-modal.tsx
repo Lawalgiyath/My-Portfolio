@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { personalizedProjectSuggestions } from "@/ai/flows/personalized-project-suggestions";
 import type { PersonalizedProjectSuggestionsOutput } from "@/ai/flows/personalized-project-suggestions";
-import { Wand2, Loader2, Lightbulb } from "lucide-react";
+import { MessageSquare, Loader2, Lightbulb } from "lucide-react";
 import { Skeleton } from "./ui/skeleton";
 
 export function AiSuggestionModal() {
@@ -42,15 +42,15 @@ export function AiSuggestionModal() {
         <Button
           variant="default"
           size="icon"
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-2xl animate-pulse"
+          className="fixed left-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full shadow-lg bg-foreground text-background hover:bg-foreground/80"
         >
-          <Wand2 className="h-7 w-7" />
+          <MessageSquare className="h-6 w-6" />
           <span className="sr-only">Get AI Suggestions</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 font-headline text-2xl">
+          <DialogTitle className="flex items-center gap-2 text-2xl">
             <Lightbulb className="h-6 w-6 text-primary" />
             Personalized Suggestions
           </DialogTitle>
