@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
 const SkillCard = ({ title, items }: { title: string; items: string[] }) => (
-  <Card className="shadow-lg bg-secondary/50 border-border hover:border-primary/50 transition-colors duration-300">
+  <Card className="shadow-lg bg-secondary/50 border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
     <CardHeader>
       <CardTitle className="text-2xl font-headline">{title}</CardTitle>
     </CardHeader>

@@ -31,7 +31,7 @@ export function ExperienceTimeline() {
             </div>
 
             <div className="w-full md:w-5/12">
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-border hover:border-primary">
+              <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-border hover:border-primary hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-2">
                     <div className="md:hidden h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0">

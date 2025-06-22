@@ -1,3 +1,5 @@
+import type { ElementType } from "react";
+
 export interface Project {
   id: string;
   title: string;
@@ -19,4 +21,12 @@ export interface Testimonial {
   role: string;
   avatarUrl: string;
   comment: string;
+}
+
+export interface Experience {
+  date: string;
+  title: string;
+  company: string;
+  description: string;
+  Icon: ElementType;
 }

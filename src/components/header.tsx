@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Work", href: "#projects" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
@@ -17,15 +18,21 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setIsScrolled(isScrolled);
+      const isScrolledUpdate = window.scrollY > 10;
+      setIsScrolled(isScrolledUpdate);
 
-      const sections = navItems.map(item => document.querySelector(item.href) as HTMLElement | null);
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 150;
+
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        setActiveSection('contact');
+        return;
+      }
       
       let currentSection = "home";
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
+      const sectionElements = navItems.map(item => document.querySelector(item.href) as HTMLElement | null);
+
+      for (let i = sectionElements.length - 1; i >= 0; i--) {
+        const section = sectionElements[i];
         if (section && section.offsetTop <= scrollPosition) {
           currentSection = navItems[i].href.substring(1);
           break;

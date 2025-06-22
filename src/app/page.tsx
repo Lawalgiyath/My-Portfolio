@@ -7,6 +7,7 @@ import { TestimonialsSection } from '@/components/testimonials-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
 import { AiSuggestionModal } from '@/components/ai-suggestion-modal';
+import { ExperienceTimeline } from '@/components/experience-timeline';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <div className="space-y-24 md:space-y-32 my-24 md:my-32">
           <AboutSection />
           <SkillsSection />
+          <ExperienceTimeline />
           <ProjectsSection />
           <TestimonialsSection />
           <ContactSection />
