@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Welcome to the creative universe of Lawal Giyath. A portfolio showcasing design, development, and innovation.",
   icons: {
     icon: 'https://i.postimg.cc/hvyvwFGm/Logo-for-G-Tech-Startup-Aesthetic-removebg-preview.png',
+    shortcut: 'https://i.postimg.cc/hvyvwFGm/Logo-for-G-Tech-Startup-Aesthetic-removebg-preview.png',
+    apple: 'https://i.postimg.cc/hvyvwFGm/Logo-for-G-Tech-Startup-Aesthetic-removebg-preview.png',
   },
 };
 
