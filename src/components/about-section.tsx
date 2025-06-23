@@ -8,7 +8,7 @@ export function AboutSection() {
         <div className="flex justify-center">
             <div className="relative">
                 <Image
-                src="https://i.postimg.cc/2yXbfxPr/Whats-App-Image-2025-06-23-at-22-55-23-f44a34aa.jpg"
+                src="https://i.postimg.cc/0NGxWjLR/Whats-App-Image-2025-06-23-at-22-55-23-f44a34aa.jpg"
                 alt="A portrait of Lawal Giyath"
                 width={400}
                 height={450}
