@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -10,19 +10,16 @@ export function ContactSection() {
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
         </p>
         <Button asChild size="lg">
-          <a href="mailto:lawal.giyath@example.com">
+          <a href="mailto:Lawalgiyath200716@gmail.com">
             Get in touch
           </a>
         </Button>
         <div className="flex justify-center gap-6 mt-12">
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub Profile">
             <Github className="h-6 w-6" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/lawal-giyath-6ab470282" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn Profile">
             <Linkedin className="h-6 w-6" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-            <Twitter className="h-6 w-6" />
           </a>
         </div>
       </div>

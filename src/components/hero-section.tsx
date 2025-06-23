@@ -20,7 +20,7 @@ export function HeroSection() {
             Lawal Giyath
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-8" style={{textShadow: '0 1px 5px rgba(0,0,0,0.2)'}}>
-            A creative developer and designer shaping unique digital experiences. Welcome to my universe of innovation.
+            A frontend developer passionate about building clean, user-friendly interfaces and leading technical communities.
           </p>
           <div className="flex gap-4 justify-center">
             <a href="#projects">
