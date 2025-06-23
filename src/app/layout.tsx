@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   title: 'Giyathverse | Lawal Giyath Portfolio',
   description: "Welcome to the creative universe of Lawal Giyath. A portfolio showcasing design, development, and innovation.",
+  icons: {
+    icon: 'https://i.postimg.cc/hvyvwFGm/Logo-for-G-Tech-Startup-Aesthetic-removebg-preview.png',
+  },
 };
 
 export default function RootLayout({
