@@ -19,7 +19,8 @@ export interface Skill {
 export interface Testimonial {
   name: string;
   role: string;
-  avatarUrl: string;
+  avatarUrl?: string;
+  Icon?: ElementType;
   comment: string;
 }
 

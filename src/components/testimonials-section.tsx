@@ -23,7 +23,9 @@ export function TestimonialsSection() {
               <div className="flex items-center">
                 <Avatar className="h-12 w-12 mr-4 border-2 border-primary">
                   <AvatarImage src={item.avatarUrl} alt={item.name} />
-                  <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>
+                  <AvatarFallback className="bg-secondary">
+                    {item.Icon ? <item.Icon className="h-6 w-6 text-primary" /> : item.name.charAt(0)}
+                  </AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="font-semibold text-lg">{item.name}</p>

@@ -1,4 +1,4 @@
-import { Briefcase, Building, Code } from "lucide-react";
+import { Briefcase, Building, Code, Bot, Building2 } from "lucide-react";
 import type { Project, Skill, Testimonial, Experience } from "@/lib/types";
 
 export const projects: Project[] = [
@@ -61,19 +61,19 @@ export const skillsetAndTools: Skill = {
       {
       name: "AIROL Partner",
       role: "Affiliated Company",
-      avatarUrl: "https://placehold.co/100x100.png",
+      Icon: Building2,
       comment: "Lawal's strong engineering contributions were a key factor in our project's success. We were proud to feature his work on our site.",
     },
     {
       name: "CJID x Google Developers",
       role: "Hackathon Organizers",
-      avatarUrl: "https://placehold.co/100x100.png",
+      Icon: Code,
       comment: "The Spiral Waves team, led by Lawal, delivered an impressive and polished UI for their project, earning them a well-deserved third place in the hackathon.",
     },
       {
       name: "FIRST Tech Challenge",
       role: "Event Coordinator",
-      avatarUrl: "https://placehold.co/100x100.png",
+      Icon: Bot,
       comment: "As Head of Software, Lawal's leadership in prototyping and improving UI for the driver stations was outstanding and greatly enhanced the user experience.",
     },
   ];
