@@ -9,16 +9,6 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 export function ProjectsSection() {
-  const handleProjectClick = (projectName: string) => {
-    if (typeof window !== 'undefined') {
-      const history = JSON.parse(localStorage.getItem('browsingHistory') || '[]');
-      if (!history.includes(projectName)) {
-        history.push(projectName);
-        localStorage.setItem('browsingHistory', JSON.stringify(history));
-      }
-    }
-  };
-
   return (
     <section id="projects" className="container mx-auto px-4">
       <div className="text-center mb-16">
@@ -33,7 +23,6 @@ export function ProjectsSection() {
           <Dialog key={project.id}>
             <DialogTrigger asChild>
               <div
-                onClick={() => handleProjectClick(project.title)}
                 className="group cursor-pointer bg-secondary/50 rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 border border-border"
               >
                 <div className="overflow-hidden">

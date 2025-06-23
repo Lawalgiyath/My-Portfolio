@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -80,6 +83,35 @@ export function Header() {
               </a>
             ))}
           </nav>
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-background/90 backdrop-blur-lg border-l-border/50">
+                 <nav className="flex flex-col items-center justify-center h-full gap-8">
+                  {navItems.map((item) => (
+                    <SheetClose asChild key={item.name}>
+                      <a
+                        href={item.href}
+                        className={cn(
+                          "text-2xl font-medium transition-colors duration-300",
+                           activeSection === item.href.substring(1)
+                            ? "text-primary"
+                            : "text-foreground hover:text-primary"
+                        )}
+                      >
+                        {item.name}
+                      </a>
+                    </SheetClose>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
