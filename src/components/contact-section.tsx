@@ -10,12 +10,12 @@ export function ContactSection() {
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
         </p>
         <Button asChild size="lg">
-          <a href="mailto:Lawalgiyath200716@gmail.com">
+          <a href="https://wa.me/2349026411798" target="_blank" rel="noopener noreferrer">
             Get in touch
           </a>
         </Button>
         <div className="flex justify-center gap-6 mt-12">
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub Profile">
+          <a href="https://github.com/LCODER2007" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub Profile">
             <Github className="h-6 w-6" />
           </a>
           <a href="https://www.linkedin.com/in/lawal-giyath-6ab470282" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn Profile">
