@@ -27,7 +27,7 @@ export function AboutSection() {
             I'm a frontend developer passionate about creating responsive, user-friendly interfaces. I excel at transforming design concepts into clean, efficient code, collaborating with teams on real-world projects, and leading technical initiatives. I am dedicated to continuous learning and am currently expanding my expertise in React, design systems, and frontend performance optimization.
           </p>
           <Button size="lg" asChild>
-            <a href="mailto:Lawalgiyath200716@gmail.com?subject=CV Request from Portfolio">Request CV</a>
+            <a href="https://wa.me/2349026411798?text=Hi%20Lawal%2C%20I'd%20like%20to%20request%20your%20CV." target="_blank" rel="noopener noreferrer">Request CV</a>
           </Button>
         </div>
       </div>
