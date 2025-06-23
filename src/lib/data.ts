@@ -16,10 +16,9 @@ export const projects: Project[] = [
     id: "project-2",
     title: "FixMyArea Hackathon App",
     category: "Hackathon Project",
-    description: "Designed a clean, mobile-responsive UI for the MVP platform and translated UX requirements into functional components. Led a three-person team to third place.",
+    description: "Designed a clean, mobile-responsive UI for the MVP platform, translated UX requirements into functional components, and led a three-person team to third place out of ten teams.",
     tags: ["UI/UX", "Mobile-Responsive", "Team Lead", "React"],
     imageUrl: "https://placehold.co/600x400.png",
-    link: "#",
     data_ai_hint: "map application",
   },
   {
@@ -29,7 +28,6 @@ export const projects: Project[] = [
     description: "Led the front-end logic and UI flows for robot control interfaces, introducing prototypes and improving UX for driver stations.",
     tags: ["UI/UX", "Robotics", "Prototyping"],
     imageUrl: "https://placehold.co/600x400.png",
-    link: "#",
     data_ai_hint: "robot interface",
   }
 ];
@@ -37,13 +35,13 @@ export const projects: Project[] = [
 export const skillsetAndTools: Skill = {
     title: "My Technical Skills",
     items: [
-      "HTML5 & CSS3",
-      "JavaScript (ES6+)",
-      "React.js",
-      "Firebase & MongoDB",
-      "Tailwind CSS & Bootstrap",
-      "Git & GitHub",
+      "HTML5, CSS3, JavaScript (ES6+), Python (basic)",
+      "React.js (in progress), TypeScript, Web Animations",
+      "Firebase, MongoDB",
+      "Tailwind CSS, Bootstrap",
+      "Git, GitHub, VS Code, Netlify",
       "Figma (UI/UX Design)",
+      "Responsive Web Design, Wireframing, Version Control",
     ],
   };
   
@@ -92,7 +90,7 @@ export const skillsetAndTools: Skill = {
       date: "2023 - 2025",
       title: "Frontend/UI Contributor",
       company: "AIROL (Artificial Intelligence and Robotics Lab)",
-      description: "Developed front-end layouts for internal dashboards and created clean data visualizations. Featured on a partner company website for strong contributions.",
+      description: "Developed front-end layouts for internal dashboards, collaborated with the backend team to create clean data visualizations, and was featured on a partner company website for strong engineering contributions.",
       Icon: Code,
     },
     {

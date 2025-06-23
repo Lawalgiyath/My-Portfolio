@@ -74,11 +74,15 @@ export function ProjectsSection() {
                     data-ai-hint={project.data_ai_hint}
                 />
               </div>
-              {project.link && (
+              {project.link ? (
                 <Button asChild className="mt-4 w-full">
                   <Link href={project.link} target="_blank">
                     View Project <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
+                </Button>
+              ) : (
+                <Button disabled className="mt-4 w-full">
+                  Link not available yet
                 </Button>
               )}
             </DialogContent>
