@@ -8,11 +8,11 @@ export function AboutSection() {
         <div className="flex justify-center">
             <div className="relative">
                 <Image
-                src="https://placehold.co/400x450.png"
-                alt="Lawal Giyath Portrait"
+                src="https://i.ibb.co/dKq4Bf6/IMG-1135.jpg"
+                alt="A portrait of Lawal Giyath"
                 width={400}
                 height={450}
-                className="rounded-xl shadow-2xl"
+                className="rounded-xl shadow-2xl object-cover w-[400px] h-[450px]"
                 data-ai-hint="professional portrait"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-primary/20 backdrop-blur-sm p-4 rounded-lg shadow-lg border border-white/10">
