@@ -21,7 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} !scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} !scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" href="/app/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/app/favicon.svg" />
+        <link rel="shortcut icon" href="/app/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/app/apple-touch-icon.png" />
+        <link rel="manifest" href="/app/site.webmanifest" />
+      </head>
       <body className="font-body bg-background text-foreground antialiased">
         {children}
         <Toaster />

@@ -18,7 +18,8 @@ export const projects: Project[] = [
     category: "Hackathon Project",
     description: "Designed a clean, mobile-responsive UI for the MVP platform, translated UX requirements into functional components, and led a three-person team to third place out of ten teams.",
     tags: ["UI/UX", "Mobile-Responsive", "Team Lead", "React"],
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.postimg.cc/C5wQPkk2/fixmyarea.png",
+    link: "not available yet",
     data_ai_hint: "map application",
   },
   {
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     description: "Led the front-end logic and UI flows for robot control interfaces, introducing prototypes and improving UX for driver stations.",
     tags: ["UI/UX", "Robotics", "Prototyping"],
     imageUrl: "https://placehold.co/600x400.png",
+    link: "not available yet",
     data_ai_hint: "robot interface",
   }
 ];
