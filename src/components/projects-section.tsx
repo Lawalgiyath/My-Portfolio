@@ -18,7 +18,7 @@ export function ProjectsSection() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {projects.map((project) => (
           <Dialog key={project.id}>
             <DialogTrigger asChild>
@@ -63,7 +63,7 @@ export function ProjectsSection() {
                     data-ai-hint={project.data_ai_hint}
                 />
               </div>
-              {project.link ? (
+              {project.link && project.link !== 'not available yet' ? (
                 <Button asChild className="mt-4 w-full">
                   <Link href={project.link} target="_blank">
                     View Project <ExternalLink className="ml-2 h-4 w-4" />
@@ -77,9 +77,6 @@ export function ProjectsSection() {
             </DialogContent>
           </Dialog>
         ))}
-      </div>
-      <div className="text-center mt-16">
-        <Button variant="outline" size="lg">View all Projects</Button>
       </div>
     </section>
   );

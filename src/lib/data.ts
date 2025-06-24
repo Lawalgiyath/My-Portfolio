@@ -21,16 +21,6 @@ export const projects: Project[] = [
     imageUrl: "https://i.postimg.cc/C5wQPkk2/fixmyarea.png",
     link: "not available yet",
     data_ai_hint: "map application",
-  },
-  {
-    id: "project-3",
-    title: "FTC Robot Control Interface",
-    category: "UI/UX & Robotics",
-    description: "Led the front-end logic and UI flows for robot control interfaces, introducing prototypes and improving UX for driver stations.",
-    tags: ["UI/UX", "Robotics", "Prototyping"],
-    imageUrl: "https://placehold.co/600x400.png",
-    link: "not available yet",
-    data_ai_hint: "robot interface",
   }
 ];
 
